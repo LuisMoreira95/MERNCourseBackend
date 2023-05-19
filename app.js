@@ -53,8 +53,9 @@ mongoose
     `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.1zwiesl.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`
   )
   .then(() => {
-    app.listen(5000);
+    app.listen(process.env.PORT || 5000);
   })
   .catch((err) => {
+    console.log("ENV VARS ERR --> ", DB_USER, DB_PASSWORD, DB_NAME);
     console.log(err);
   });
