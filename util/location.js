@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const API_KEY = process.env.GOOGLE_API_KEY; // API_KEY = "AIzaSyDI3ug5xel7ezjoFlDykXypyV-TuGdjzrc";
+const API_KEY = process.env.GOOGLE_API_KEY;
 
 async function getCoordsForAddress(address) {
   // const url = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${encodeURIComponent(
